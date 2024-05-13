@@ -1,6 +1,6 @@
 {
   "Version": "5.4.0",
-  "Title": "管理后台",
+  "Title": "静安15分钟生活圈管理",
   "FixedHeader": true,
   "HiddenSideBar": false,
   "MultiTagsCache": false,
@@ -16,7 +16,7 @@
   "Stretch": false,
   "SidebarStatus": true,
   "EpThemeColor": "#409EFF",
-  "ShowLogo": true,
+  "ShowLogo": false,
   "ShowModel": "smart",
   "MenuArrowIconNoTransition": true,
   "CachingAsyncRoutes": false,

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Search from "../search/index.vue";
-import Notice from "../notice/index.vue";
-import FullScreen from "./fullScreen.vue";
+// import Search from "../search/index.vue";
+// import Notice from "../notice/index.vue";
+// import FullScreen from "./fullScreen.vue";
 import SidebarItem from "./sidebarItem.vue";
 import { isAllEmpty } from "@pureadmin/utils";
 import { ref, nextTick, computed } from "vue";
@@ -17,7 +17,7 @@ const {
   title,
   logout,
   backTopMenu,
-  onPanel,
+  // onPanel,
   getLogo,
   username,
   userAvatar,
@@ -69,6 +69,9 @@ nextTick(() => {
         <span class="el-dropdown-link navbar-bg-hover">
           <img :src="userAvatar" :style="avatarsStyle" />
           <p v-if="username" class="dark:text-white">{{ username }}</p>
+          <span class="set-icon navbar-bg-hover" title="打开系统配置">
+            <IconifyIconOffline :icon="Setting" />
+          </span>
         </span>
         <template #dropdown>
           <el-dropdown-menu class="logout">
@@ -82,13 +85,9 @@ nextTick(() => {
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-      <span
-        class="set-icon navbar-bg-hover"
-        title="打开系统配置"
-        @click="onPanel"
-      >
+      <!-- <span class="set-icon navbar-bg-hover" title="打开系统配置">
         <IconifyIconOffline :icon="Setting" />
-      </span>
+      </span> -->
     </div>
   </div>
 </template>

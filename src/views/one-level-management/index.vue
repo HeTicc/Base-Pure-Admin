@@ -1,5 +1,5 @@
 <template>
-  <div>一级分类管理</div>
+  <div><Auth value="btn_add">一级分类管理</Auth></div>
 </template>
 
 <!-- <script setup lang="ts">

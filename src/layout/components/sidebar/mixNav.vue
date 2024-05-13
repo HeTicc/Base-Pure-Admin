@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import extraIcon from "./extraIcon.vue";
-import Search from "../search/index.vue";
-import Notice from "../notice/index.vue";
-import FullScreen from "./fullScreen.vue";
+// import Search from "../search/index.vue";
+// import Notice from "../notice/index.vue";
+// import FullScreen from "./fullScreen.vue";
 import { isAllEmpty } from "@pureadmin/utils";
 import { useNav } from "@/layout/hooks/useNav";
 import { ref, toRaw, watch, onMounted, nextTick } from "vue";
@@ -19,7 +19,7 @@ const {
   route,
   device,
   logout,
-  onPanel,
+  // onPanel,
   resolvePath,
   username,
   userAvatar,
@@ -101,6 +101,9 @@ watch(
         <span class="el-dropdown-link navbar-bg-hover select-none">
           <img :src="userAvatar" :style="avatarsStyle" />
           <p v-if="username" class="dark:text-white">{{ username }}</p>
+          <span class="set-icon navbar-bg-hover" title="打开系统配置">
+            <IconifyIconOffline :icon="Setting" />
+          </span>
         </span>
         <template #dropdown>
           <el-dropdown-menu class="logout">
@@ -114,13 +117,9 @@ watch(
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-      <span
-        class="set-icon navbar-bg-hover"
-        title="打开系统配置"
-        @click="onPanel"
-      >
+      <!-- <span class="set-icon navbar-bg-hover" title="打开系统配置">
         <IconifyIconOffline :icon="Setting" />
-      </span>
+      </span> -->
     </div>
   </div>
 </template>

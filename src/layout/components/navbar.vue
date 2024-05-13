@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Search from "./search/index.vue";
-import Notice from "./notice/index.vue";
+// import Search from "./search/index.vue";
+// import Notice from "./notice/index.vue";
 import mixNav from "./sidebar/mixNav.vue";
 import { useNav } from "@/layout/hooks/useNav";
-import FullScreen from "./sidebar/fullScreen.vue";
+// import FullScreen from "./sidebar/fullScreen.vue";
 import Breadcrumb from "./sidebar/breadCrumb.vue";
 import topCollapse from "./sidebar/topCollapse.vue";
 import LogoutCircleRLine from "@iconify-icons/ri/logout-circle-r-line";
@@ -13,7 +13,7 @@ const {
   layout,
   device,
   logout,
-  onPanel,
+  // onPanel,
   pureApp,
   username,
   userAvatar,
@@ -50,6 +50,9 @@ const {
         <span class="el-dropdown-link navbar-bg-hover select-none">
           <img :src="userAvatar" :style="avatarsStyle" />
           <p v-if="username" class="dark:text-white">{{ username }}</p>
+          <span class="set-icon navbar-bg-hover" title="打开系统配置">
+            <IconifyIconOffline :icon="Setting" />
+          </span>
         </span>
         <template #dropdown>
           <el-dropdown-menu class="logout">
@@ -63,12 +66,8 @@ const {
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-      <span
-        class="set-icon navbar-bg-hover"
-        title="打开系统配置"
-        @click="onPanel"
-      >
-        <IconifyIconOffline :icon="Setting" />
+      <span class="set-icon navbar-bg-hover" title="打开系统配置">
+        <!-- <IconifyIconOffline :icon="Setting" /> -->
       </span>
     </div>
   </div>

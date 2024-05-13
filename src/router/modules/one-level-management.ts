@@ -12,7 +12,8 @@ export default {
       name: "OneLevelManagement",
       component: () => import("@/views/one-level-management/index.vue"),
       meta: {
-        title: "一级分类管理"
+        title: "一级分类管理",
+        auths: ["btn_add"]
       }
     }
   ]

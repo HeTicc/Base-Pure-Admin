@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    width: 20px;
     height: 48px;
     cursor: pointer;
   }
@@ -575,7 +575,7 @@
 }
 
 body[layout="vertical"] {
-  $sideBarWidth: 210px;
+  $sideBarWidth: 260px;
 
   @include merge-style($sideBarWidth);
 
