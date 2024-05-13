@@ -120,9 +120,9 @@ onMounted(() => {
   }
 });
 
-onBeforeMount(() => {
-  useDataThemeChange().dataThemeChange($storage.layout?.overallStyle);
-});
+// onBeforeMount(() => {
+//   useDataThemeChange().dataThemeChange($storage.layout?.overallStyle);
+// });
 
 const layoutHeader = defineComponent({
   render() {

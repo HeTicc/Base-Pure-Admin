@@ -63,7 +63,7 @@ const router = useRouter();
         }"
         @click="router.push('/')"
       >
-        返回首页
+        返回管理
       </el-button>
     </div>
   </div>

@@ -1,24 +1,22 @@
-const { VITE_HIDE_HOME } = import.meta.env;
 const Layout = () => import("@/layout/index.vue");
 
 export default {
   path: "/",
-  name: "Home",
+  name: "PositionManagement",
   component: Layout,
-  redirect: "/welcome",
+  redirect: "/position",
   meta: {
     icon: "ep:home-filled",
-    title: "首页",
+    title: "点位管理",
     rank: 0
   },
   children: [
     {
-      path: "/welcome",
-      name: "Welcome",
-      component: () => import("@/views/welcome/index.vue"),
+      path: "/position",
+      name: "PositionManagement",
+      component: () => import("@/views/position-management/index.vue"),
       meta: {
-        title: "首页",
-        showLink: VITE_HIDE_HOME === "true" ? false : true
+        title: "点位管理"
       }
     }
   ]
